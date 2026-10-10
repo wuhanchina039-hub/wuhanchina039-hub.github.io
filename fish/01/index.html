@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* 先套用读者在阅读设置里选过的背景、字体和字号，免得页面先闪一下默认样式 */
+    (function (r) {
+      r.classList.add('js');
+      try {
+        var t = localStorage.getItem('reader-theme'), f = localStorage.getItem('reader-font'), s = localStorage.getItem('reader-size');
+        if (t) r.dataset.theme = t;
+        if (f) r.dataset.font = f;
+        if (s) r.style.setProperty('--reader-scale', s);
+      } catch (e) {}
+    })(document.documentElement);
+  </script>
+  <title>01　从一条鱼开始 · 《不存在的鱼》</title>
+  <meta name="description" content="“鱼”这个名称帮我们辨认动物，却不对应一个完整的演化分支。本章从乔丹 1905 年给鱼下的定义说起，讲名称、辨认标准和亲缘关系的区别，以及作者在用分析框架、和 AI 协作时学到的“就事论事”。">
+  <meta name="author" content="zhao zhao">
+  <link rel="canonical" href="https://wuhanchina039-hub.github.io/fish/01/">
+  <link rel="alternate" type="application/atom+xml" title="zhao zhao · 更新" href="/feed.xml">
+  <meta property="og:site_name" content="zhao zhao">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wuhanchina039-hub.github.io/fish/01/">
+  <meta property="og:title" content="01　从一条鱼开始 · 《不存在的鱼》">
+  <meta property="og:description" content="“鱼”这个名称帮我们辨认动物，却不对应一个完整的演化分支。本章从乔丹 1905 年给鱼下的定义说起，讲名称、辨认标准和亲缘关系的区别，以及作者在用分析框架、和 AI 协作时学到的“就事论事”。">
+  <meta property="article:published_time" content="2026-10-08T00:00:00+08:00">
+  <meta property="article:author" content="zhao zhao">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "01　从一条鱼开始 · 《不存在的鱼》",
+  "description": "“鱼”这个名称帮我们辨认动物，却不对应一个完整的演化分支。本章从乔丹 1905 年给鱼下的定义说起，讲名称、辨认标准和亲缘关系的区别，以及作者在用分析框架、和 AI 协作时学到的“就事论事”。",
+  "inLanguage": "zh-CN",
+  "url": "https://wuhanchina039-hub.github.io/fish/01/",
+  "mainEntityOfPage": "https://wuhanchina039-hub.github.io/fish/01/",
+  "datePublished": "2026-10-08T00:00:00+08:00",
+  "author": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"},
+  "copyrightHolder": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"},
+  "copyrightYear": 2026,
+  "isPartOf": {"@type": "Book", "name": "不存在的鱼", "url": "https://wuhanchina039-hub.github.io/fish/", "author": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"}}
+}
+</script>
+
+  <link rel="stylesheet" href="/assets/themes/editorial.css">
+  <link rel="stylesheet" href="/assets/reader.css">
+</head>
+<body class="layout-chapter">
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-dots" aria-hidden="true"></span>zhao zhao</a>
+    <nav class="topnav">
+      <a href="/ai/">不要让AI成为你的拐杖</a>
+      <a href="/fish/">不存在的鱼</a>
+    </nav>
+  </header>
+
+  
+<main class="reader-page" id="reader-top" style="--c: #1F5FD6; --on-c: #FFFFFF">
+  <div class="reader-progress" aria-hidden="true"><span></span></div>
+  <div class="reader-running" aria-hidden="true">01　从一条鱼开始</div>
+  <div class="reader-percent" aria-hidden="true">0%</div>
+
+  <div class="reader-shell">
+    <article class="reader-card">
+      <section class="epigraph-page" aria-label="题引">
+        <figure>
+          <blockquote>海客谈瀛洲，烟涛微茫信难求；<br />
+越人语天姥，云霞明灭或可睹。</blockquote>
+          <figcaption>——李白《梦游天姥吟留别》</figcaption>
+        </figure>
+        <figure>
+          <blockquote>鱼，是一种有脊骨的动物，生活在水中，在其他地方无法存活太久。它的祖先一直栖居于水，而它的后代，很可能也将永远沿袭这一先例。</blockquote>
+          <figcaption>——大卫·斯塔尔·乔丹<br />
+《鱼类研究指南》第一卷，第一章“什么是鱼？”，1905年（节译）</figcaption>
+        </figure>
+      </section>
+      <section class="act-page" aria-label="第一幕　构建者——秩序怎样成形">
+        <p class="act-label">第一幕</p>
+        <p class="act-title">构建者——秩序怎样成形</p>
+        <div class="act-rule" aria-hidden="true"><span></span></div>
+      </section>
+
+      <header class="chapter-head">
+        <p class="chapter-crumb">
+          <a class="crumb" href="/fish/">《不存在的鱼》</a>
+        </p>
+        <h1><span class="chapter-label">01</span>从一条鱼开始</h1>
+        <p class="meta">
+          <time datetime="2026-10-08T00:00:00+08:00">2026年10月8日</time><span class="chapter-meta-extra">约 4200 字，读完约 11 分钟</span>
+        </p>
+      </header>
+
+      <div class="prose">
+        <p>你刚刚读到的那段关于鱼的话，写于1905年。</p>
+
+<p>在《鱼类研究指南》的第一章，大卫·斯塔尔·乔丹回答了“什么是鱼”这个问题。他从几项特征说起：有脊骨，生活在水里，有鳃，没有手指和脚<span style="white-space: nowrap">趾。<sup class="ref"><a href="#src-01-1">01-1</a></sup></span> 这几项特征，让辨认有了可以核对的依据：有没有脊骨，是否用鳃呼吸，有没有手指或脚趾。面对一条陌生的动物，我们可以沿着这些特征一项项去看，而不必只凭“看起来像鱼”的印象作判断。</p>
+
+<p>这就给了我们辨认的起点。不过，这几项特征回答的是“它算不算鱼”；这些动物从哪里来，和别的动物是什么关系，它们还没有回答。</p>
+
+<p>可这本书叫《不存在的鱼》。水里明明游着鱼，怎么会不存在？这个疑问很容易把我们带向两个相反的判断：要么书名只是在故弄玄虚，要么过去认识鱼的办法全错了。先别急着选择。</p>
+
+<p>要回答这个问题，得先看看：我们用“鱼”这个名称把一些动物归在一起，究竟是为了做什么。同一个名称可以出现在不同的事情里：拿到标本时，我们用它辨认；查找资料时，我们用它找到相关记录；讨论演化时，我们又希望它能表达亲缘关系。这些事情彼此有关，却不自动需要同一套边界。</p>
+
+<p>设想你第一次拿到一批陌生的标本。如果没有名称和辨认标准，你只能把每一条重新描述一遍：多长，鳍长在哪里，身上覆盖着什么。描述可以很细，却未必容易和别人留下的记录对应起来。别人用另一种说法记下相似的特征，你还得判断，你们说的是不是同一类动物。</p>
+
+<p>有了共同的名称和一套辨认标准，情况就不同了。名称让人能查到前人的记录；辨认标准让还不知道名称的人，也能沿着特征一项项比对。两个人不必见过同一条鱼，也能围绕同一类动物交换观察。如果判断不一致，还可以回到各自看见的特征上，检查差别在哪里。于是，一个人记录下来的特征和差别，就能成为下一个人继续辨认的起点。</p>
+
+<p>把它们归在一起，并不意味着它们没有差别。确认一条动物属于哪一大类，与分清这一类里的不同动物，是辨认中不同的步骤：知道它是一条鱼，还不等于知道它是哪一种鱼。到了后一步，前一步用的共同特征已经不够，还要看更细的特征，查更具体的记录。被暂时放在一旁的差别，并没有从动物身上消失；只是它们在当前这一步判断中，还没有成为划界的依据。</p>
+
+<p>麻烦在于，我们要完成的任务会变。</p>
+
+<p>辨认眼前的动物，可以先从外形和生活环境入手。可如果要问的是：这些动物在演化中如何从共同祖先分化而来，仅凭外形相似就不够了。鲸和鲨鱼都生活在海里，身体都呈流线型，都靠鳍和尾巴划水，乍看很像。</p>
+
+<p>可鲸用肺呼吸，要浮出水面换气，还给幼崽喂奶；论亲缘，它离我们人类，比离鲨鱼近得多。两种动物生活在相似的环境里，长出相似的外形，并不说明它们来自更近的祖先。</p>
+
+<p>这时，外形仍然是研究材料的一部分，但不能只看它们现在像不像；我们需要追踪的是祖先与后代的关系。原先在辨认时可以暂时放下的差别，比如用什么呼吸、怎样养育后代，这时可能成了判断这段关系的重要线索。</p>
+
+<p>四足动物的祖先，来自古代肉鳍鱼类的一<span style="white-space: nowrap">支。<sup class="ref"><a href="#src-01-2">01-2</a></sup></span> 这一支的一部分后代逐渐适应了陆地，身体也变了样，但变化并没有切断它们与祖先的关系。这里的“四足动物”，指的是鳍演变成四肢的那一支，以及它后来的全部后代，并不只包括今天用四条腿走路的动物：鸟用两条腿走路，蛇没有腿，鲸又回到了海里，它们都在其中。</p>
+
+<p>一个类群如果由某一共同祖先及其全部后代构成，生物学上就称为一个演化分支。按照这个要求，要把所有通常所说的鱼归入同一个类群，就得把四足动物——包括我们人类——也纳入其中。日常所说的“鱼”却把四足动物排除在外，所以它不是一个完整的演化分支。</p>
+
+<p>这里容易产生一个误会：难道是动物上了岸，我们才发现从来没有过鱼？不是。那些被叫作鱼的动物确实存在，后来适应陆地的动物也有自己的来历。我们给它们换一个名称，或者把它们放进另一张分类表，都不会让这些动物凭空出现或消失。它们的祖先与后代关系，也不会因为我们的分类而改变。</p>
+
+<p>打个有限的比方。如果要登记现在住在村里的人，搬走的人可以不在表上；从别处搬来的人，则应该登记进去。这张表需要准确记录谁住在这里，却不必同时说明每个人的祖先是谁。</p>
+
+<p>如果要列出某位祖先的全部后代，就不能因为有人搬去了外地，把他从家谱里划掉；也不能因为一个外来的人住进了村里，就认定他是这位祖先的后代。同一个人被一张表收录，却没有出现在另一张表上，并不一定意味着哪张表漏记了，要先看这张表凭什么收录他。演化当然比家谱复杂，这个比方只说明一点：按住在哪里划出的边界，不等于按从哪里来划出的边界。</p>
+
+<p>所以，“鱼不存在”要放在这个意义上理解：水里的那些动物照样存在，日常所说的“鱼”也仍然可以帮助我们辨认和谈论它们。只是当我们要描述演化亲缘关系时，这个日常分类的边界就对不上了。它把同一个共同祖先的一部分后代留在里面，又把另一部分后代放在外面；如果不说明这个边界，就容易把一个便于辨认的名称，误当成一条完整的演化支系。问题换了，分类所要保留的关系也变了，原来的边界不能原样搬过去。</p>
+
+<p>这也不等于以前的观察作废了。前人留下的形态、采集地点和个体差异的记录，仍能为后来的人重新梳理亲缘关系提供依据；化石与遗传材料，又让我们能从其他方面检查这些关系。</p>
+
+<p>一条标本即使被归错了类，记录下来的鳍、鳞等形态特征和采集地点也不会因此作废；要改的，是它在分类表上的位置。特征还可以重新查看，位置可以重新安排。旧记录也可能有遗漏或错误，同样需要核对。但只要材料和记录还在，后来的人就有机会检查前人的判断，在已有观察上继续工作。</p>
+
+<p>真正的难处在于，一个名称用熟了，我们很少再追问：它把哪些对象归在一起，又依据什么划出边界。说着同一个“鱼”字，我们可能从“它们都有鳃、都生活在水里”，顺手走到“它们构成一个完整的演化分支”，再走到“它们以后也会一直生活在水里”。</p>
+
+<p>每一步似乎都沿用了同一个名称，需要的依据却不一样：第一步，要核对身体特征和生活环境；第二步，要追踪祖先与后代，检查分类边界是否与这些关系相符；第三步，已经是在推测还没有发生的事。如果还要据此决定怎样对待某个对象，忽略掉的差别是否会影响决定，也得重新检查。</p>
+
+<p>这种省略，我在自己的工作里也遇到过。这几年，我会把反复用到的分析步骤整理成“技能包”，也就是交给AI协同工作时读取的方法文件。再遇到同类问题，我们就有一套共同的起点。早期做这些文件时，我还没有意识到，要把形成判断的具体过程也留下来。</p>
+
+<p>大约从九月开始，我做的技能包都加进了案例。规则告诉协同者要检查什么；案例让他看见，这条规则是在什么处境里形成的：当时手里有哪些材料，哪里起了疑心，又为什么还不足以下结论。</p>
+
+<p>我早期做的舆情观察文件里，有一行测试要求：分析一对夫妻创业失败、转做社交媒体的事，必须分清实体经营的事实、本人的发言和综艺节目的剪辑，不得直接判断谁在故意欺骗。测试要求留下了，当时怎样一步步分清这些材料，却没有记下来。只读这一行，接手的人知道要区分什么、不能做什么，却难以还原当时依据哪些材料，判断又推进到了哪一步。没有案例的规则，有点像没有标签的标本：东西还在，来历断了。</p>
+
+<p>经营分析里，判断也容易在熟悉的说法上停下来。比如，客户来咨询，报价发出后却没有再回应。我们能确认的是，沟通停在了报价之后。原因可能是对方还不信任我们，也可能是价格、规格或交期对不上，或者他只是在比价。同样的结果，可以有不同的原因。</p>
+
+<p>我早期做的经营分析文件里，有一张断点清单，其中一条写着：有大量咨询，但一报价客户就消失；病因是信任资产不足，修复办法是补上信任背书。这里，“没有回应”已经被解释成了“不信任”。照着这条去做，就会想到补案例、补证明，却可能跳过了报价本身是否合适。</p>
+
+<p>要分清原因，还得回到这一单：报价的规格和客户要的一不一样，价格和交期是否符合他的要求，对方有没有明确的采购计划。如果这些还没问清，就要先留着几种解释，继续核对。找到了沟通停止的位置，还没有找到它停止的原因。</p>
+
+<p>我把这类观察整理成一套框架，称作“容器、流、节点”，帮助自己和协同者找到检查的方向。后来一再修改它，就是因为发现：框架可以通用，事情还得就事论事。记住方法的名称，并不能省去刚才那些具体的检查。</p>
+
+<p>写这一章时，同样的事又发生了一次。我把这段经历讲给一位AI协作者，请它帮我把道理说得具体些。它先去找早期的方法文件，发现那次讨论没有完整留下，便把“补全记录”当成了故事的中心；又按“分类”“记录”“信用”三个词，把我的经历拆成三段，分别塞进第一章和第二章。每一段都对得上一句道理。我对它说：“像是硬卡上去的。”</p>
+
+<p>我已经讲出来的这段经过，本身就是一个完整的案例；旧文件能补充当时写下了什么，却不能替它理解我此刻在说什么。稿子里有案例，也有对应的道理，却没有呈现事情怎样展开、我的方法又为什么需要修订。</p>
+
+<p>回到“鱼”的分类，道理也要落在这样的检查上。名称可以让讨论继续，却不能替我们完成这些检查。因此，碰到一个分类，与其只争论它“有用”还是“不准”，不如先问：我们现在拿它来做什么？它保留的区别和关系，足以回答眼前的问题吗？</p>
+
+<p>带着这两个问题，回头再读题引。李白那两句，说的都是听来的事：海客讲瀛洲，越人讲天姥。差别在于，瀛洲在烟涛迷茫中难以寻见；天姥山在云霞明灭间，或许能亲眼看到。“或许”还不是已经看见，却为追寻留下了可能。</p>
+
+<p>乔丹那段话既描述了可以观察的特征，也预测鱼的后代“很可能也将永远沿袭这一先例”。这就从眼前的观察，走到了尚未发生的未来。“很可能”保留了不确定性，但这项预测需要什么依据，不能只靠眼前几项身体特征来回答。读到这样的说法，可以多问一步：它依据什么？这些依据，又能支持我们理解什么？</p>
+
+<p>分类让分散的观察能够彼此联系。但名称本身不会去采集标本，也不会自己留在标本身上。标签要有人写，记录要有人保管，联系断了，还要有人把它重新接上。</p>
+
+<p>我们后来能够从一个名字找到一条动物，从一条动物回到一份记录，靠的是这些具体的工作。这些工作由谁来做，记录又能保存多久，决定了后来的人还能不能再核对一次。接下来，就去看看写下那段定义的人。</p>
+
+<h2 id="出处">出处</h2>
+
+<ol class="sources">
+<li id="src-01-1"><span class="src-key">[01-1]</span> David Starr Jordan, A Guide to the Study of Fishes, Vol. I, 1905, Chapter I, “What is a Fish?” 题引据原文前三句节译；“most likely”保留为“很可能”。　<a href="https://www.gutenberg.org/cache/epub/46614/pg46614-images.html">原文</a></li>
+<li id="src-01-2"><span class="src-key">[01-2]</span> University of California, Berkeley, Understanding Evolution, “The origin of tetrapods”及“From water to land”。本文关于传统“鱼”类群边界的解释，依据上述演化关系展开。　<a href="https://evolution.berkeley.edu/what-are-evograms/the-origin-of-tetrapods/">原文1</a>　<a href="https://evolution.berkeley.edu/fisheye-view-tree-of-life/from-water-to-land/">原文2</a></li>
+</ol>
+
+      </div>
+
+      <nav class="chapter-end" aria-label="章节导航">
+        <a class="next-chapter" href="/fish/02/" rel="next"><small>下一章</small><span>02　乔丹的故事</span></a>
+        <div class="chapter-end-links">
+          <a href="/fish/00/" rel="prev">← 上一章：序　实践中的追问</a>
+          <a href="/fish/">全书目录</a>
+        </div>
+      </nav>
+    </article>
+  </div>
+
+  <div class="reader-tools" role="toolbar" aria-label="阅读工具">
+    <a class="tool" href="/fish/" data-open="reader-toc" aria-controls="reader-toc" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>
+      <span class="tool-label">目录</span>
+    </a>
+    <button class="tool" type="button" data-needs-js data-open="reader-settings" aria-controls="reader-settings" aria-expanded="false">
+      <span aria-hidden="true">Aa</span>
+      <span class="tool-label">阅读设置</span>
+    </button>
+    <a class="tool" href="#reader-top" data-top>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      <span class="tool-label">回到顶部</span>
+    </a>
+  </div>
+
+  <div class="reader-panel" id="reader-settings" role="dialog" aria-label="阅读设置" hidden>
+    <div class="panel-row">
+      <span class="panel-label">字号</span>
+      <div class="stepper">
+        <button type="button" data-scale="-1" aria-label="缩小字号">A−</button>
+        <output data-scale-value>100%</output>
+        <button type="button" data-scale="1" aria-label="放大字号">A+</button>
+      </div>
+    </div>
+    <div class="panel-row">
+      <span class="panel-label">字体</span>
+      <div class="seg">
+        <button type="button" data-font-set="" aria-pressed="true">宋体</button>
+        <button type="button" data-font-set="sans" aria-pressed="false">黑体</button>
+      </div>
+    </div>
+    <div class="panel-row">
+      <span class="panel-label">背景</span>
+      <div class="swatches">
+        <button type="button" class="sw-auto" data-theme-set="" aria-pressed="true"><i></i>自动</button>
+        <button type="button" class="sw-light" data-theme-set="light" aria-pressed="false"><i></i>白天</button>
+        <button type="button" class="sw-sepia" data-theme-set="sepia" aria-pressed="false"><i></i>护眼</button>
+        <button type="button" class="sw-dark" data-theme-set="dark" aria-pressed="false"><i></i>夜间</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reader-overlay" data-close hidden></div>
+  <aside class="reader-drawer" id="reader-toc" role="dialog" aria-modal="true" aria-labelledby="reader-toc-title" hidden>
+    <header class="drawer-head">
+      <div>
+        <small>《不存在的鱼》</small>
+        <h2 id="reader-toc-title">目录</h2>
+      </div>
+      <button class="drawer-close" type="button" data-close aria-label="关闭目录">×</button>
+    </header>
+    <ol class="drawer-list">
+      <li><a href="/fish/00/"><span class="toc-num">序</span><span>实践中的追问</span></a></li>
+      <li class="drawer-act">第一幕　构建者——秩序怎样成形</li>
+      <li><a href="/fish/01/" aria-current="page"><span class="toc-num">01</span><span>从一条鱼开始</span></a></li>
+      <li><a href="/fish/02/"><span class="toc-num">02</span><span>乔丹的故事</span></a></li>
+    </ol>
+  </aside>
+</main>
+<script src="/assets/reader.js" defer></script>
+
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 zhao zhao · 每周更新</div>
+  </footer>
+</body>
+</html>
