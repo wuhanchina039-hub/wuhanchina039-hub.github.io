@@ -1,0 +1,252 @@
+/* 章节阅读页：桌面上一张居中的纸，右侧悬浮工具栏（目录、阅读设置、回到顶部），
+   顶部阅读进度条。屏幕较窄时，纸张铺满，工具栏变成底部栏，往下读时自动收起。
+   手机上参照微信读书：不显示网站顶栏，读过标题后左上角显示章节名，右下角显示
+   阅读百分比，段首不缩进，点一下正文显示或收起工具栏。
+   只在章节页加载；颜色来自当前设计（--paper、--ink、--line 等）。 */
+
+:root {
+  --measure: 640px;                        /* 正文一行的宽度 */
+  --card: calc(var(--measure) + 160px);    /* 纸张宽度 = 正文 + 左右留白 */
+  --prose-size: 17px;                      /* 正文默认字号，再乘以读者在“阅读设置”里选的比例 */
+}
+/* 电脑上的标准字号：作者在原来 92% 时看到的大小（17px × 0.92 ≈ 15.6px），读者可以再放大或缩小。
+   手机和平板保持 17px（手机一行约 20 字）。 */
+@media (min-width: 1000px) { :root { --prose-size: 15.6px; } }
+@media (min-width: 1200px) { :root { --measure: 760px; } }
+@media (min-width: 1600px) { :root { --measure: 800px; --prose-size: 16.5px; } }
+
+.layout-chapter { background: var(--desk, var(--bg)); }
+
+.reader-shell { max-width: calc(var(--card) + 40px); margin: 28px auto 0; padding: 0 20px; }
+.reader-card {
+  padding: 56px 80px 56px;
+  background: var(--paper);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px var(--soft-shadow, rgba(0, 0, 0, .06)), 0 14px 40px var(--soft-shadow, rgba(0, 0, 0, .06));
+}
+/* 用书的颜色写的字（章节编号和标题、幕名）：护眼背景下略加深，夜间调亮，保证看得清 */
+.reader-page { --c-ink: var(--c); }
+:root[data-theme="dark"] .reader-page { --c-ink: var(--ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .reader-page { --c-ink: var(--ink); } }
+@supports (color: color-mix(in srgb, red, blue)) {
+  :root[data-theme="sepia"] .reader-page { --c-ink: color-mix(in srgb, var(--c) 88%, #000); }
+  :root[data-theme="dark"] .reader-page { --c-ink: color-mix(in srgb, var(--c) 55%, #fff); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme]) .reader-page { --c-ink: color-mix(in srgb, var(--c) 55%, #fff); } }
+}
+
+/* 章节标题：左对齐，编号在上、标题在下，下面一条书的颜色的线（参照微信读书） */
+.reader-card .chapter-head { padding: 0; background: none; border: 0; color: inherit; text-align: left; }
+.chapter-crumb { margin: 0 0 28px; color: var(--muted); font-size: 13px; }
+.reader-card .chapter-head .crumb { margin: 0; font-size: 13px; }
+.chapter-crumb .act { display: inline; margin: 0; font-size: inherit; letter-spacing: .08em; }
+.chapter-crumb .act::before { content: " · "; letter-spacing: 0; }
+.reader-card .chapter-head h1 { padding-bottom: 16px; border-bottom: 2px solid var(--c); color: var(--c-ink); }
+.chapter-label { display: block; margin-bottom: 6px; font-size: 15px; letter-spacing: .1em; }
+.reader-card .chapter-head .meta { margin-top: 14px; }
+.reader-card .chapter-head .meta::after { content: none; }
+
+/* 幕名页：每一幕的第一章前面单独一屏，居中（参照微信读书的“卷”页） */
+.reader-card { --bleed: 80px; }   /* 纸张左右留白，幕名页的底色和横线铺到纸边 */
+.act-page {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 100vh; min-height: 100svh;
+  margin: 0 calc(-1 * var(--bleed)); padding: 48px var(--bleed) 18vh;
+  color: var(--c-ink); font-family: var(--serif, serif); text-align: center;
+  background: linear-gradient(180deg, transparent 45%, var(--act-tint, transparent) 78%, transparent);
+}
+@supports (color: color-mix(in srgb, red, blue)) { .act-page { --act-tint: color-mix(in srgb, var(--c) 9%, transparent); } }
+.act-label { margin: 0 0 14px; font-size: 20px; font-weight: 700; letter-spacing: .12em; }
+.act-title { margin: 0; font-size: clamp(26px, 7vw, 34px); font-weight: 700; line-height: 1.4; }
+.act-rule { position: relative; align-self: stretch; height: 10px; margin: 40px calc(-1 * var(--bleed)) 0; }
+.act-rule::before { content: ""; position: absolute; left: 0; right: 0; top: 4px; border-top: 1px solid var(--c); }
+.act-rule span { position: absolute; left: 50%; top: 0; width: 132px; height: 10px; transform: translateX(-50%); background: var(--paper); border: 1px solid var(--c); border-radius: 999px; }
+.act-rule span::after { content: ""; position: absolute; left: 8px; right: 8px; top: 3px; border-top: 1px solid var(--c); }
+.reader-card .prose { padding: 32px 0 8px; font-size: calc(var(--prose-size) * var(--reader-scale, 1)); }
+:root[data-font="sans"] .reader-card .prose,
+:root[data-font="sans"] .reader-card .chapter-head h1 { font-family: var(--sans, sans-serif); }
+.chapter-meta-extra::before { content: " · "; }
+
+/* 版权信息：每本书第一页前面单独一屏，居中（参照微信读书） */
+.copyright-page {
+  min-height: 100vh; min-height: 100svh;
+  padding: 12vh 0 48px;
+  font-family: var(--serif, serif); font-size: 16px; line-height: 1.9; text-align: center;
+}
+.copyright-page p { margin: 0 0 1.1em; }
+.copyright-page .copyright-title { margin-bottom: 1.4em; font-size: 26px; font-weight: 700; line-height: 1.4; }
+.copyright-page hr { margin: 1.8em 0; border: 0; border-top: 1px solid var(--ink); }
+.copyright-page a { text-decoration-color: var(--c); text-underline-offset: 4px; overflow-wrap: anywhere; }
+
+/* 题引：单独占一屏，像书里的一页；文字左对齐 */
+.epigraph-page {
+  display: flex; flex-direction: column; justify-content: center; gap: 2.8em;
+  min-height: 100vh; min-height: 100svh;
+  padding: 48px 0;
+  font-family: var(--serif, serif);
+  font-size: calc(var(--prose-size) * var(--reader-scale, 1));
+}
+:root[data-font="sans"] .epigraph-page { font-family: var(--sans, sans-serif); }
+.epigraph-page figure { margin: 0; }
+.epigraph-page blockquote { margin: 0; padding: 0; border: 0; color: var(--ink); line-height: 2; }
+.epigraph-page figcaption { margin-top: .7em; color: var(--muted); font-size: .82em; line-height: 1.9; }
+
+/* 章末：下一章大按钮 */
+.chapter-end { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--line); }
+.next-chapter {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 18px 20px;
+  background: var(--c); color: var(--on-c);
+  border-radius: 4px;
+  font-family: var(--serif, inherit); font-size: 18px;
+  text-align: center; text-decoration: none;
+  transition: filter .15s;
+}
+a.next-chapter:hover { filter: brightness(1.08); }
+.next-chapter small { font-family: var(--sans, inherit); font-size: 13px; opacity: .9; }
+.next-chapter.is-waiting { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
+.chapter-end-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; margin-top: 16px; font-size: 14px; }
+.chapter-end-links a { color: var(--muted); text-decoration: none; }
+.chapter-end-links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+/* 阅读进度条 */
+.reader-progress { position: fixed; top: 0; left: 0; right: 0; z-index: 40; height: 3px; pointer-events: none; }
+.reader-progress span { display: block; width: 0; height: 100%; background: var(--c); }
+
+/* 手机顶部的章节名、底部的阅读百分比（电脑上不显示） */
+.reader-running, .reader-percent { display: none; }
+
+/* 工具栏（电脑：纸张右侧的一列圆形按钮） */
+.reader-tools {
+  position: fixed; z-index: 30;
+  bottom: 48px; left: calc(50% + var(--card) / 2 + 20px);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.tool {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 50%;
+  box-shadow: 0 2px 10px var(--soft-shadow, rgba(0, 0, 0, .08));
+  font: 600 15px/1 var(--sans, sans-serif);
+  text-decoration: none; cursor: pointer;
+  transition: border-color .15s, transform .15s;
+}
+.tool:hover { border-color: var(--ink); transform: translateY(-1px); }
+.tool[aria-expanded="true"] { border-color: var(--c); color: var(--c); }
+.tool svg { width: 20px; height: 20px; }
+.tool-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.tool[data-needs-js] { display: none; }
+.js .tool[data-needs-js] { display: grid; }
+
+/* 阅读设置面板 */
+.reader-panel {
+  position: fixed; z-index: 35;
+  bottom: 48px; left: calc(50% + var(--card) / 2 - 360px);
+  width: 360px; padding: 20px 20px 16px;
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 12px 36px var(--soft-shadow, rgba(0, 0, 0, .12));
+  font-family: var(--sans, sans-serif); font-size: 14px;
+}
+.reader-panel[hidden], .reader-drawer[hidden], .reader-overlay[hidden] { display: none; }
+.panel-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.panel-row:last-child { margin-bottom: 4px; }
+.panel-label { flex: none; color: var(--muted); }
+.stepper, .seg { display: flex; align-items: center; gap: 6px; }
+.stepper button, .seg button, .swatches button {
+  min-width: 44px; height: 34px; padding: 0 10px;
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  font: inherit; cursor: pointer;
+}
+.stepper output { min-width: 48px; text-align: center; font-variant-numeric: tabular-nums; }
+.seg button[aria-pressed="true"], .swatches button[aria-pressed="true"] { border-color: var(--c); box-shadow: inset 0 0 0 1px var(--c); }
+.swatches { display: flex; gap: 6px; }
+.swatches button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; height: auto; min-width: 52px; padding: 8px 4px 6px; font-size: 12px; }
+.swatches i { display: block; width: 22px; height: 22px; border: 1px solid rgba(0, 0, 0, .18); border-radius: 50%; }
+.sw-auto i { background: linear-gradient(135deg, #FFFDF8 50%, #221E1A 50%); }
+.sw-light i { background: #FFFDF8; }
+.sw-sepia i { background: #F7EEDB; }
+.sw-dark i { background: #221E1A; }
+
+/* 目录抽屉 */
+.reader-overlay { position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, .35); }
+.reader-drawer {
+  position: fixed; z-index: 60; top: 0; right: 0; bottom: 0;
+  display: flex; flex-direction: column;
+  width: min(380px, 100%);
+  background: var(--paper); color: var(--ink);
+  box-shadow: -12px 0 40px var(--soft-shadow, rgba(0, 0, 0, .15));
+  animation: drawer-in .2s ease-out;
+}
+@keyframes drawer-in { from { transform: translateX(24px); opacity: 0; } }
+.drawer-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 24px 24px 16px; border-bottom: 1px solid var(--line); }
+.drawer-head small { display: block; color: var(--muted); font-size: 13px; }
+.drawer-head h2 { margin: 4px 0 0; font-family: var(--serif, inherit); font-size: 22px; }
+.drawer-close { width: 36px; height: 36px; padding: 0; background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 50%; font-size: 20px; line-height: 1; cursor: pointer; }
+.drawer-close:hover { color: var(--ink); border-color: var(--ink); }
+.drawer-list { flex: 1; margin: 0; padding: 8px 0 24px; overflow-y: auto; list-style: none; }
+.drawer-act { padding: 18px 24px 6px; color: var(--muted); font-family: var(--serif, inherit); font-size: 13px; letter-spacing: .12em; }
+.drawer-list a { display: flex; gap: 14px; padding: 12px 24px; border-left: 3px solid transparent; font-family: var(--serif, inherit); font-size: 16px; text-decoration: none; }
+.drawer-list a:hover { background: var(--bg); }
+.drawer-list a[aria-current="page"] { border-left-color: var(--c); background: var(--bg); font-weight: 700; }
+.drawer-list .toc-num { flex: none; width: 24px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* 屏幕较窄：工具栏移到底部，变成一排带文字的按钮 */
+@media (max-width: 999px) {
+  .reader-shell { padding-bottom: 72px; }
+  .reader-tools {
+    left: 0; right: 0; bottom: 0;
+    flex-direction: row; justify-content: space-around; gap: 0;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    transition: transform .25s;
+  }
+  .reader-tools.is-hidden { transform: translateY(110%); }
+  .tool, .js .tool[data-needs-js] {
+    display: flex; flex-direction: column; gap: 3px;
+    width: auto; height: auto; padding: 6px 16px;
+    border: 0; border-radius: 8px; box-shadow: none;
+    font-size: 12px; font-weight: 400;
+  }
+  .tool:hover { transform: none; }
+  .tool > span[aria-hidden] { font-size: 16px; font-weight: 600; line-height: 20px; }
+  .tool-label { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .reader-panel { left: 12px; right: 12px; bottom: calc(68px + env(safe-area-inset-bottom)); width: auto; }
+}
+/* 手机：纸张铺满屏幕，版式参照微信读书 */
+@media (max-width: 759px) {
+  .layout-chapter { background: var(--paper); }
+  .layout-chapter .topbar, .reader-progress { display: none; }
+  .reader-shell { margin-top: 0; padding: 0 24px 72px; }  /* 17px 字号下，390px 宽的手机一行约 20 字 */
+  .reader-card { --bleed: 24px; padding: 40px 0 32px; background: none; border-radius: 0; box-shadow: none; }
+  .reader-card .prose > p { margin: 0 0 1.2em; text-indent: 0; }
+  .prose .sources li { scroll-margin-top: 48px; }
+  .js .reader-running, .js .reader-percent {
+    display: block; position: fixed; z-index: 20; left: 0; right: 0;
+    padding: 0 24px; background: var(--paper); color: var(--muted);
+    font: 12px/1 var(--sans, sans-serif);
+  }
+  .js .reader-running {
+    top: 0; padding-top: 12px; padding-bottom: 10px;
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s;
+  }
+  .js .reader-running.is-shown { opacity: 1; visibility: visible; }
+  /* 正文从章节名条、百分比条下面经过时，边缘淡出，不留生硬的切口 */
+  .js .reader-running::after, .js .reader-percent::before {
+    content: ""; position: absolute; left: 0; right: 0; height: 12px; pointer-events: none;
+  }
+  .js .reader-running::after { top: 100%; background: linear-gradient(var(--paper), transparent); }
+  .js .reader-percent::before { bottom: 100%; background: linear-gradient(transparent, var(--paper)); }
+  .js .reader-percent {
+    bottom: 0; padding-top: 8px; padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    text-align: right; font-variant-numeric: tabular-nums;
+  }
+  .reader-drawer { top: auto; width: 100%; max-height: 80vh; border-radius: 14px 14px 0 0; animation-name: sheet-in; }
+  @keyframes sheet-in { from { transform: translateY(24px); opacity: 0; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reader-drawer, .reader-tools, .tool, .reader-running { animation: none; transition: none; }
+}

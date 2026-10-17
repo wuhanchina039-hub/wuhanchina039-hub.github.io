@@ -1,0 +1,5 @@
+# 允许所有搜索引擎和 AI 爬虫读取。转载请注明作者和出处，并附原文链接。
+User-agent: *
+Allow: /
+
+Sitemap: https://wuhanchina039-hub.github.io/sitemap.xml
