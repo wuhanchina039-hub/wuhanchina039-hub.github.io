@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5F1E9">
+  <script>
+    /* 先套用读者在阅读设置里选过的背景、字体和字号，免得页面先闪一下默认样式 */
+    (function (r) {
+      r.classList.add('js');
+      try {
+        var t = localStorage.getItem('reader-theme'), f = localStorage.getItem('reader-font'), s = localStorage.getItem('reader-size');
+        if (t) r.dataset.theme = t;
+        if (f) r.dataset.font = f;
+        if (s) r.style.setProperty('--reader-scale', s);
+      } catch (e) {}
+    })(document.documentElement);
+  </script>
+  <title>拐杖与系统的边界 · 随笔</title>
+  <meta name="description" content="一段话说得通，与它真正用得上、经得起交付验收之间，还隔着相当长的距离。有些基础的重复工作可以交给工具，有些流程需要与人约定，而那些最核心的责任与价值判断，目前仍然必须由我自己来承担。">
+  <meta name="author" content="zhao zhao">
+  <link rel="canonical" href="https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/">
+  <link rel="alternate" type="application/atom+xml" title="zhao zhao · 更新" href="/feed.xml">
+  <meta property="og:site_name" content="zhao zhao">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/">
+  <meta property="og:title" content="拐杖与系统的边界 · 随笔">
+  <meta property="og:description" content="一段话说得通，与它真正用得上、经得起交付验收之间，还隔着相当长的距离。有些基础的重复工作可以交给工具，有些流程需要与人约定，而那些最核心的责任与价值判断，目前仍然必须由我自己来承担。">
+  <meta property="og:image" content="https://wuhanchina039-hub.github.io/assets/share-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+  <link rel="apple-touch-icon" href="/assets/icon-180.png">
+  <meta property="article:published_time" content="2026-10-22T17:01:00+08:00">
+  <meta property="article:author" content="zhao zhao">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "拐杖与系统的边界 · 随笔",
+  "description": "一段话说得通，与它真正用得上、经得起交付验收之间，还隔着相当长的距离。有些基础的重复工作可以交给工具，有些流程需要与人约定，而那些最核心的责任与价值判断，目前仍然必须由我自己来承担。",
+  "inLanguage": "zh-CN",
+  "url": "https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/",
+  "mainEntityOfPage": "https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/",
+  "datePublished": "2026-10-22T17:01:00+08:00",
+  "author": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"},
+  "copyrightHolder": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"},
+  "copyrightYear": 2026,
+  "isPartOf": {"@type": "Blog", "name": "随笔", "url": "https://wuhanchina039-hub.github.io/notes/", "author": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"}}
+}
+</script>
+
+  <link rel="stylesheet" href="/assets/themes/editorial.css?v=202610242242">
+  <link rel="stylesheet" href="/assets/library.css?v=202610242242">
+  <link rel="stylesheet" href="/assets/share.css?v=202610242242">
+  <link rel="stylesheet" href="/assets/reader.css?v=202610242242">
+</head>
+<body class="layout-chapter">
+  <header class="topbar">
+    <a class="brand" href="/"><img class="brand-mark" src="/assets/icon.svg" alt="" width="28" height="28">zhao zhao</a>
+    <nav class="topnav" aria-label="网站导航">
+      <a href="/">首页</a>
+      <a href="/fish/">不存在的鱼</a>
+      <a href="/notes/" aria-current="page">随笔</a>
+      <a href="/#about">关于</a>
+    </nav>
+  </header>
+
+  
+<main class="reader-page" id="reader-top" style="--c: #825A41; --on-c: #FAF7F1">
+  <div class="reader-progress" aria-hidden="true"><span></span></div>
+  <div class="reader-running" aria-hidden="true"><span class="running-book">随笔 · </span><span class="running-name">拐杖与系统的边界</span></div>
+  <div class="reader-percent" aria-hidden="true">0%</div>
+
+  <div class="reader-shell">
+    <article class="reader-card" data-book="notes" data-column>
+<nav class="breadcrumb" aria-label="当前位置">
+  <ol>
+    <li><a href="/">首页</a></li>
+    <li><a href="/notes/">随笔</a></li>
+    <li><span aria-current="page">拐杖与系统的边界</span></li>
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://wuhanchina039-hub.github.io/"},
+    {"@type": "ListItem", "position": 2, "name": "随笔", "item": "https://wuhanchina039-hub.github.io/notes/"},
+    {"@type": "ListItem", "position": 3, "name": "拐杖与系统的边界", "item": "https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/"}
+  ]
+}
+</script>
+
+
+      <header class="chapter-head">
+        <h1>拐杖与系统的边界</h1>
+        <p class="meta">
+          <time datetime="2026-10-22T17:01:00+08:00">2026年10月22日</time><span class="chapter-meta-extra">约 2100 字，读完约 6 分钟</span>
+        </p>
+      </header>
+
+      <div class="prose">
+        <p>刚开始把 AI 接进日常工作时，我确实感到过兴奋。</p>
+
+<p>做了多年市场运营，过去积累的商业直觉、用户判断和操作经验一直都在。遇到一个新产品，面对一群具体的客户，或是决定一项服务该怎样向市场表达，我原本就有自己的思路。只是在过去，要把这些想法逐字变成资料、文案和可以交付讨论的方案，常常需要消耗大量的时间与精力。现在，许多原本停留在脑子里的构想，能够极其迅速地在屏幕上铺开。我得以第一时间看见它们的形态，然后再接着往下改。</p>
+
+<p>那一刻的感觉，就像是突然打开了一个装满宝藏的盒子，又或是手里凭空多了一把称手的兵器。原来受限于精力而不得不搁置的事情，忽然有了推进的可能；一个方向可以迅速往下演进，另一个念头也能立刻跑一次测试。我能做的事一下变多了，也极其自然地产生了一种错觉：既然能力得到了扩展，眼前这些涌现出来的所有问题，自己似乎都应该想办法去解决、去承担。</p>
+
+<p>可现实并没有随着“答案”的变多，就同样顺理成章地推进下去。</p>
+
+<p>最初，一段结构完整、表达漂亮的回答，很容易让我觉得它极其“合拍”。它不仅能接住我的话，甚至还能顺着逻辑补出我没有想到的细节。可等到真正把这些内容拿到具体的生产环节去落地时，我才逐渐看清：一段话说得通，与它真正用得上、经得起交付验收之间，还隔着相当长的距离。</p>
+
+<p>我已经约定好的规则，到了下一轮对话里仍然可能偏离；我需要的是一个可以立即使用的生产结果，它给出的却往往只是一份看似完整的解释与说明；刚指出一个逻辑偏差，下一轮它又可能在另一个隐蔽的地方冒出新的幻觉。于是，原本以为可以顺利交接出去的工作，最后还是要由我重新读一遍、查一遍、核对一遍，再逐字解释一遍。</p>
+
+<p>这种反复出现的过程，会带来一种极其具体的疲惫：话明明已经说得这么透彻了，怎么还是没有真正理解？</p>
+
+<p>可如果仅仅停留在“工具不够聪明”的抱怨上，事情不会有任何进展。我必须回头去拆解，自己在协作中究竟交代了什么：哪些要求只是口头说过，哪些要求变成了可以复用的结构；也必须去辨别，究竟是我没有把上下文和边界说清，还是它把没有事实依据的部分补得过于顺畅。这两种情况交织在一起，绝不能每次都用同一种情绪化的解释带过。</p>
+
+<p>后来，我重新去审视早期做的一些技能包和提示词系统，发现了一个自己当时完全没有意识到的盲区：里面写满了方法、流程与禁忌，却没有留下任何促成这些规则的具体案例与现实处境。</p>
+
+<p>当时撰写的时候，事情的前因后果都在我自己的脑子里。我知道某条规则是在防范什么风险，也清楚它究竟在哪些特定的条件下才适用。可后来接手的人或工具看到的，只有被高度抽象、整理后的结论。少了当时的具体处境，一句看似通用的规则，就极有可能被机械地套用到所有事情上。我原本是想留下经验，结果留下来的，却是一套死板且容易出错的要求。</p>
+
+<p>后来去补齐那些真实案例，便不只是为了让文档看起来更好懂。我希望协作者能够清晰地看见：当时面对的究竟是什么局面，为什么会做出那样的判断，哪些外部条件一旦发生改变，原本的规则就需要重新评估。框架可以帮助人快速进入一件事，但绝不能因为框架看起来通用，就省去对眼前这件事具体的理解与核验。</p>
+
+<p>想到这里，我对“把经验整理成系统”这件事，有了更深的追问。把规则写得更长、更细，是否真的减少了误解？还是只是让我在下一次偏离发生时，多了一份可以指出“这里我早已写过”的文件？如果每一次返工，仍然需要我亲自把背景补回去、把逻辑拉回来，这项工作就还没有真正被接过去。</p>
+
+<p>这也是我写《不要让AI成为你的拐杖》时，一直在深思的内核。</p>
+
+<p>AI 确实能帮我把思路迅速展开，把散乱的材料组织起来，可我仍然必须时刻保持清醒去判断：哪些内容来自已知的事实依据，哪些只是它顺势补出的过度合理化解释。尤其是那些读起来顺畅、极像我自己平时表达习惯的话，更容易让人在无意间放松核对。若仅仅因为工具替我说得足够漂亮，就把核心的价值判断也交了出去，这种对“拐杖”的依赖，就会在不知不觉中发生。</p>
+
+<p>因此，我开始更加严苛地要求那些过去容易被忽略的环节：资料能否追溯到确凿的出处，结论是否越过了已有的证据，交付的东西是否真的能够落地，出了错误能否精准追查到是哪一步偏离了逻辑。这些审计和核对确实拖慢了速度，甚至有时让我觉得，明明用上了更高效的工具，自己怎么反而花了更多的时间在纠错上。</p>
+
+<p>可若不做这些审查，省下来的时间，终究会在后续更严重的返工和失误里重新赔进去。</p>
+
+<p>只是，这种纠错和审计，绝不能永远只靠我一个人多盯一遍、多硬扛一次。我过去习惯了亲自做、亲自看，事情出了差错，再第一时间站出来兜底。现在有了 AI，如果只是把同时展开的线性工作变得更多，却仍然由我一个人去记住所有背景、发现所有偏差、承担全部后果，那种疲惫感并不会自动消失。</p>
+
+<p>我真正想建立的协作与系统，应该能够让该留下的上下文自然留下，该核对的地方被清晰看见；让接手的人或工具清楚自己在做什么，也明白遇到什么界限需要停下来询问。这里面，有些基础的重复工作可以交给工具，有些流程需要与人约定，而那些最核心的责任与价值判断，目前仍然必须由我自己来承担。</p>
+
+<p>这些边界，我还在一个又一个具体的项目和推进中不断摸索。有些规则写下以后确实产生了效果，有些到了下一次协作，又暴露出新的遗漏。</p>
+
+<p>但在离开最初打开宝藏盒子时的盲目兴奋之后，我仍然选择继续使用它。我也依然期待着有朝一日，一项工作在交付出去之后，不必再依靠我时刻守在旁边，也能稳定、准确地沿着正确的方向运转下去。</p>
+
+      </div>
+      <aside class="article-rights" aria-label="版权与引用">
+        <p>本文版权归作者 zhao zhao 所有。欢迎转载，请注明作者和出处，并附原文链接。</p>
+        <p>引用本文：zhao zhao，《拐杖与系统的边界》（随笔），2026年10月22日，<span class="cite-url">https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/</span></p>
+      </aside>
+
+      <div class="share-end" data-share-js>
+        <p>读完了，转给可能需要的朋友</p>
+        <div class="actions">
+          <button type="button" class="btn" data-share-open>分享这篇</button>
+          <button type="button" class="btn ghost" data-share-copy>复制链接</button>
+        </div>
+        <p class="share-end-tip">也可以选中喜欢的句子（手机上长按），写下想法，生成卡片发出去</p>
+      </div>
+
+      <nav class="chapter-end" aria-label="章节导航">
+        <a class="next-chapter" href="/notes/2026-10-22-after-dawn/" rel="next"><small>下一篇</small><span>天亮以后</span></a>
+        <div class="chapter-end-links">
+          <a href="/notes/2026-10-22-still-not-turning-back/" rel="prev">← 上一篇：还不肯调头</a>
+          <span class="chapter-end-home">
+            <a href="/notes/">全部文章</a>
+            <a href="/">回到首页</a>
+          </span>
+        </div>
+      </nav>
+    </article>
+  </div>
+
+  <div class="reader-tools" role="toolbar" aria-label="阅读工具">
+    <a class="tool" href="/">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5L12 4l8 6.5"/><path d="M6.5 9v10h11V9"/><path d="M10 19v-5h4v5"/></svg>
+      <span class="tool-label">首页</span>
+    </a>
+    <a class="tool" href="/notes/" data-open="reader-toc" aria-controls="reader-toc" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>
+      <span class="tool-label">目录</span>
+    </a>
+    <button class="tool" type="button" data-needs-js data-open="reader-settings" aria-controls="reader-settings" aria-expanded="false">
+      <span aria-hidden="true">Aa</span>
+      <span class="tool-label">阅读设置</span>
+    </button>
+    <button class="tool" type="button" data-needs-js data-share-open>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+      <span class="tool-label">分享</span>
+    </button>
+    <a class="tool" href="#reader-top" data-top>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      <span class="tool-label">回到顶部</span>
+    </a>
+  </div>
+
+  <div class="reader-panel" id="reader-settings" role="dialog" aria-label="阅读设置" hidden>
+    <div class="panel-row">
+      <span class="panel-label">字号</span>
+      <div class="stepper">
+        <button type="button" data-scale="-1" aria-label="缩小字号">A−</button>
+        <output data-scale-value>100%</output>
+        <button type="button" data-scale="1" aria-label="放大字号">A+</button>
+      </div>
+    </div>
+    <div class="panel-row">
+      <span class="panel-label">字体</span>
+      <div class="seg">
+        <button type="button" data-font-set="" aria-pressed="true">宋体</button>
+        <button type="button" data-font-set="sans" aria-pressed="false">黑体</button>
+      </div>
+    </div>
+    <div class="panel-row">
+      <span class="panel-label">背景</span>
+      <div class="swatches">
+        <button type="button" class="sw-auto" data-theme-set="" aria-pressed="true"><i></i>自动</button>
+        <button type="button" class="sw-light" data-theme-set="light" aria-pressed="false"><i></i>白天</button>
+        <button type="button" class="sw-sepia" data-theme-set="sepia" aria-pressed="false"><i></i>护眼</button>
+        <button type="button" class="sw-dark" data-theme-set="dark" aria-pressed="false"><i></i>夜间</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reader-overlay" data-close hidden></div>
+  <aside class="reader-drawer" id="reader-toc" role="dialog" aria-modal="true" aria-labelledby="reader-toc-title" hidden>
+    <header class="drawer-head">
+      <div>
+        <small>随笔</small>
+        <h2 id="reader-toc-title" class="sr-only">全部文章和笔记</h2>
+        <div class="drawer-tabs" role="tablist">
+          <button type="button" role="tab" aria-selected="true" data-drawer-tab="toc">全部文章</button>
+          <button type="button" role="tab" aria-selected="false" data-drawer-tab="notes">我的笔记<small data-notes-count></small></button>
+        </div>
+      </div>
+      <button class="drawer-close" type="button" data-close aria-label="关闭目录">×</button>
+    </header>
+    <ol class="drawer-list" data-drawer-pane="toc">
+      <li><a href="/notes/2026-10-22-still-not-turning-back/"><span>还不肯调头</span></a></li>
+      <li><a href="/notes/2026-10-22-crutch-and-system/" aria-current="page"><span>拐杖与系统的边界</span></a></li>
+      <li><a href="/notes/2026-10-22-after-dawn/"><span>天亮以后</span></a></li>
+      <li><a href="/notes/2026-10-24-ability-obsession-wasteland/"><span>能力、执念与废土</span></a></li>
+    </ol>
+    <div class="drawer-notes" data-drawer-pane="notes" data-notes-list hidden></div>
+  </aside>
+</main>
+<div class="share-overlay" data-share-close hidden></div>
+<div class="share-panel" id="share-panel" role="dialog" aria-modal="true" aria-labelledby="share-heading" hidden
+  data-share-title="拐杖与系统的边界"
+  data-share-url="https://wuhanchina039-hub.github.io/notes/2026-10-22-crutch-and-system/"
+  data-share-desc="一段话说得通，与它真正用得上、经得起交付验收之间，还隔着相当长的距离。有些基础的重复工作可以交给工具，有些流程需要与人约定，而那些最核心的责任与价值判断，目前仍然必须由我自己来承担。"
+  data-share-from="随笔 · zhao zhao"
+  data-share-author="zhao zhao"
+  data-share-color="#825A41"
+  data-qr-src="/assets/qrcode.js?v=202610242242">
+  <header class="share-head">
+    <h2 id="share-heading">分享给朋友</h2>
+    <button class="share-close" type="button" data-share-close aria-label="关闭">×</button>
+  </header>
+  <p class="share-name">拐杖与系统的边界</p>
+  <div class="share-actions">
+    <button type="button" data-share-copy>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+      <span>复制链接</span>
+    </button>
+    <button type="button" data-share-poster>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+      <span>分享图</span>
+    </button>
+    <button type="button" data-share-native hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+      <span>更多</span>
+    </button>
+    <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwuhanchina039-hub.github.io%2Fnotes%2F2026-10-22-crutch-and-system%2F&amp;title=%E6%8B%90%E6%9D%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BE%B9%E7%95%8C" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg>
+      <span>微博</span>
+    </a>
+  </div>
+  <div class="share-wechat" data-share-wechat>
+    <div class="share-qr" data-share-qr aria-hidden="true"></div>
+    <p class="share-tip" data-share-tip>微信扫一扫，在手机上打开，<br>再点右上角 ··· 发给朋友或分享到朋友圈</p>
+  </div>
+  <div class="share-poster" data-share-poster-out hidden>
+    <img alt="这篇文章的分享图" data-share-poster-img>
+    <p class="share-tip">手机上长按图片保存；电脑上 <a href="#" download data-share-poster-save>下载图片</a></p>
+  </div>
+  <p class="share-status" role="status" aria-live="polite" data-share-status></p>
+</div>
+<script src="/assets/share.js?v=202610242242" defer></script>
+
+<div id="notes-ui" data-book="notes" data-book-title="随笔" data-kind="column" data-author="zhao zhao" data-color="#825A41" data-site="https://wuhanchina039-hub.github.io/" style="--c: #825A41">
+  <div class="share-overlay" data-notes-close hidden></div>
+  <div class="share-panel note-sheet" role="dialog" aria-modal="true" aria-labelledby="note-sheet-title" data-note-sheet hidden>
+    <header class="share-head">
+      <h2 id="note-sheet-title">写想法</h2>
+      <button class="share-close" type="button" data-notes-close aria-label="关闭">×</button>
+    </header>
+    <blockquote class="note-quote" data-sheet-quote></blockquote>
+    <label class="sr-only" for="note-text">我的想法</label>
+    <textarea id="note-text" rows="4" maxlength="1000" placeholder="读到这里，你想到了什么？"></textarea>
+    <p class="note-private">只保存在你这台设备的浏览器里，别人看不到；想让朋友看到，就生成卡片发出去。</p>
+    <div class="note-sheet-actions">
+      <button type="button" class="note-del" data-sheet-del hidden>删除这条笔记</button>
+      <button type="button" class="btn ghost" data-sheet-save>保存</button>
+      <button type="button" class="btn" data-sheet-card>保存并生成卡片</button>
+    </div>
+  </div>
+  <div class="share-panel note-card-panel" role="dialog" aria-modal="true" aria-labelledby="note-card-title" data-note-card hidden>
+    <header class="share-head">
+      <h2 id="note-card-title">想法卡片</h2>
+      <button class="share-close" type="button" data-notes-close aria-label="关闭">×</button>
+    </header>
+    <img class="note-card-img" alt="原文和想法的分享卡片" data-card-img>
+    <p class="share-tip note-card-tip">手机上长按图片，可以保存或直接发给朋友；朋友扫卡片上的二维码，会打开原文这一段。</p>
+    <div class="note-card-actions">
+      <a class="btn" href="#" download data-card-save>保存图片</a>
+      <button type="button" class="btn ghost" data-card-copy>复制原文和链接</button>
+    </div>
+  </div>
+</div>
+<script src="/assets/notes.js?v=202610242242" defer></script>
+
+<script src="/assets/reader.js?v=202610242242" defer></script>
+
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 zhao zhao · 每周更新</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5F1E9">
+  <script>
+    /* 先套用读者在阅读设置里选过的背景、字体和字号，免得页面先闪一下默认样式 */
+    (function (r) {
+      r.classList.add('js');
+      try {
+        var t = localStorage.getItem('reader-theme'), f = localStorage.getItem('reader-font'), s = localStorage.getItem('reader-size');
+        if (t) r.dataset.theme = t;
+        if (f) r.dataset.font = f;
+        if (s) r.style.setProperty('--reader-scale', s);
+      } catch (e) {}
+    })(document.documentElement);
+  </script>
+  <title>《不存在的鱼》 · zhao zhao</title>
+  <meta name="description" content="当我们倾注心力建立的秩序，条件变了，该怎样理解它，以及参与其中的人？">
+  <meta name="author" content="zhao zhao">
+  <link rel="canonical" href="https://wuhanchina039-hub.github.io/fish/">
+  <link rel="alternate" type="application/atom+xml" title="zhao zhao · 更新" href="/feed.xml">
+  <meta property="og:site_name" content="zhao zhao">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="https://wuhanchina039-hub.github.io/fish/">
+  <meta property="og:title" content="《不存在的鱼》 · zhao zhao">
+  <meta property="og:description" content="当我们倾注心力建立的秩序，条件变了，该怎样理解它，以及参与其中的人？">
+  <meta property="og:image" content="https://wuhanchina039-hub.github.io/assets/share-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+  <link rel="apple-touch-icon" href="/assets/icon-180.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "不存在的鱼",
+  "description": "名称是我们给鱼的，鱼却不是为了符合分类而存在。从我在贸易、设备、写作和 AI 协作中遇到的问题出发，这本书借一位鱼类学家的故事，以及科学、企业与艺术中的例子，追问一套秩序怎样成形，怎样进入人的工作，在条件变化后被沿用、调整或放下，又怎样在时间中被后来的人重新理解。它不寻找永远正确的秩序，只想在需要改变的时候，既不把过去一笔抹掉，也不让既有形式要求现实证明它是对的。",
+  "inLanguage": "zh-CN",
+  "url": "https://wuhanchina039-hub.github.io/fish/",
+  "author": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"},
+  "copyrightHolder": {"@type": "Person", "name": "zhao zhao", "url": "https://wuhanchina039-hub.github.io/"},
+  "hasPart": [
+    {"@type": "Chapter", "position": 1, "name": "实践中的追问", "url": "https://wuhanchina039-hub.github.io/fish/00/"},
+    {"@type": "Chapter", "position": 2, "name": "从一条鱼开始", "url": "https://wuhanchina039-hub.github.io/fish/01/"},
+    {"@type": "Chapter", "position": 3, "name": "乔丹的故事", "url": "https://wuhanchina039-hub.github.io/fish/02/"},
+    {"@type": "Chapter", "position": 4, "name": "基础动摇之后", "url": "https://wuhanchina039-hub.github.io/fish/03/"},
+    {"@type": "Chapter", "position": 5, "name": "构建冲动", "url": "https://wuhanchina039-hub.github.io/fish/04/"},
+    {"@type": "Chapter", "position": 6, "name": "什么是构建", "url": "https://wuhanchina039-hub.github.io/fish/05/"},
+    {"@type": "Chapter", "position": 7, "name": "科学构建者", "url": "https://wuhanchina039-hub.github.io/fish/06/"},
+    {"@type": "Chapter", "position": 8, "name": "企业构建者", "url": "https://wuhanchina039-hub.github.io/fish/07/"}
+  ]
+}
+</script>
+
+  <link rel="stylesheet" href="/assets/themes/editorial.css?v=202610242242">
+  <link rel="stylesheet" href="/assets/library.css?v=202610242242">
+  <link rel="stylesheet" href="/assets/share.css?v=202610242242">
+</head>
+<body class="layout-book">
+  <header class="topbar">
+    <a class="brand" href="/"><img class="brand-mark" src="/assets/icon.svg" alt="" width="28" height="28">zhao zhao</a>
+    <nav class="topnav" aria-label="网站导航">
+      <a href="/">首页</a>
+      <a href="/fish/" aria-current="page">不存在的鱼</a>
+      <a href="/notes/">随笔</a>
+      <a href="/#about">关于</a>
+    </nav>
+  </header>
+
+  
+<main class="book-page" style="--c: #385A78; --on-c: #FAF7F1">
+  <div class="wrap narrow">
+<nav class="breadcrumb" aria-label="当前位置">
+  <ol>
+    <li><a href="/">首页</a></li>
+    <li><span aria-current="page">不存在的鱼</span></li>
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://wuhanchina039-hub.github.io/"},
+    {"@type": "ListItem", "position": 2, "name": "不存在的鱼", "item": "https://wuhanchina039-hub.github.io/fish/"}
+  ]
+}
+</script>
+
+
+    <header class="book-head">
+<span class="cover" style="--c: #345C7B; --on-c: #FAF7F1" aria-hidden="true">
+  <span class="cover-in">
+    <span class="cover-kind">连载中</span>
+    <span class="cover-title">不存在的鱼</span>
+    <span class="cover-foot"><img src="/assets/icon.svg" alt="" width="20" height="20">zhao zhao</span>
+  </span>
+</span>
+
+      <div class="book-info">
+        <h1>不存在的鱼</h1>
+        <p class="book-author">zhao zhao 著</p>
+        <p class="book-intro">当我们倾注心力建立的秩序，条件变了，该怎样理解它，以及参与其中的人？</p>
+      </div>
+    </header>
+    <dl class="book-stats">
+      <div><dt>已更新</dt><dd>8<small>章</small></dd></div>
+      <div><dt>字数</dt><dd>2.5<small>万字</small></dd></div>
+      <div><dt>最近更新</dt><dd class="book-stats-date">10月21日</dd></div>
+    </dl>
+    <p class="book-schedule">连载中，每周更新两篇</p>
+
+    <div class="book-actions">
+      <a class="btn btn-read" href="/fish/00/" data-book-read="fish">开始阅读 →</a>
+      <button type="button" class="btn ghost" data-share-js data-share-open>分享这本书</button>
+    </div>
+    <p class="book-restart" data-book-restart hidden>上次读到 <span data-book-last></span> · <a href="/fish/00/">从头读</a></p>
+    <section class="section">
+      <h2 class="section-title">简介</h2>
+      <div class="book-about"><p>名称是我们给鱼的，鱼却不是为了符合分类而存在。从我在贸易、设备、写作和 AI 协作中遇到的问题出发，这本书借一位鱼类学家的故事，以及科学、企业与艺术中的例子，追问一套秩序怎样成形，怎样进入人的工作，在条件变化后被沿用、调整或放下，又怎样在时间中被后来的人重新理解。它不寻找永远正确的秩序，只想在需要改变的时候，既不把过去一笔抹掉，也不让既有形式要求现实证明它是对的。</p></div>
+    </section>
+    <section class="section" id="toc">
+      <h2 class="section-title">目录</h2>
+      <ol class="toc">
+        <li>
+          <a href="/fish/00/">
+            <span class="toc-num">序</span>
+            <span class="toc-title">实践中的追问</span>
+            <time datetime="2026-10-08T00:00:00+08:00">2026-10-08</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li class="toc-act">第一幕　构建者——秩序怎样成形</li>
+        <li>
+          <a href="/fish/01/">
+            <span class="toc-num">01</span>
+            <span class="toc-title">从一条鱼开始</span>
+            <time datetime="2026-10-08T00:00:00+08:00">2026-10-08</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="/fish/02/">
+            <span class="toc-num">02</span>
+            <span class="toc-title">乔丹的故事</span>
+            <time datetime="2026-10-08T00:00:00+08:00">2026-10-08</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="/fish/03/">
+            <span class="toc-num">03</span>
+            <span class="toc-title">基础动摇之后</span>
+            <time datetime="2026-10-13T00:00:00+08:00">2026-10-13</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="/fish/04/">
+            <span class="toc-num">04</span>
+            <span class="toc-title">构建冲动</span>
+            <time datetime="2026-10-15T00:00:00+08:00">2026-10-15</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="/fish/05/">
+            <span class="toc-num">05</span>
+            <span class="toc-title">什么是构建</span>
+            <time datetime="2026-10-17T00:00:00+08:00">2026-10-17</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="/fish/06/">
+            <span class="toc-num">06</span>
+            <span class="toc-title">科学构建者</span>
+            <time datetime="2026-10-20T00:00:00+08:00">2026-10-20</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="/fish/07/">
+            <span class="toc-num">07</span>
+            <span class="toc-title">企业构建者</span><span class="new">最新</span>
+            <time datetime="2026-10-21T00:00:00+08:00">2026-10-21</time>
+            <span class="chev" aria-hidden="true">›</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+    <section class="section" data-notes-section hidden>
+      <h2 class="section-title">我的笔记</h2>
+      <div data-notes-list></div>
+    </section>
+    <p class="book-rights">本书版权归作者个人所有。欢迎转载，请注明作者和出处，并附原文链接。</p>
+  </div>
+</main>
+<div class="share-overlay" data-share-close hidden></div>
+<div class="share-panel" id="share-panel" role="dialog" aria-modal="true" aria-labelledby="share-heading" hidden
+  data-share-title="《不存在的鱼》"
+  data-share-url="https://wuhanchina039-hub.github.io/fish/"
+  data-share-desc="当我们倾注心力建立的秩序，条件变了，该怎样理解它，以及参与其中的人？"
+  data-share-from="zhao zhao"
+  data-share-author="zhao zhao"
+  data-share-color="#385A78"
+  data-qr-src="/assets/qrcode.js?v=202610242242">
+  <header class="share-head">
+    <h2 id="share-heading">分享给朋友</h2>
+    <button class="share-close" type="button" data-share-close aria-label="关闭">×</button>
+  </header>
+  <p class="share-name">《不存在的鱼》</p>
+  <div class="share-actions">
+    <button type="button" data-share-copy>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+      <span>复制链接</span>
+    </button>
+    <button type="button" data-share-poster>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+      <span>分享图</span>
+    </button>
+    <button type="button" data-share-native hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+      <span>更多</span>
+    </button>
+    <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwuhanchina039-hub.github.io%2Ffish%2F&amp;title=%E3%80%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E9%B1%BC%E3%80%8B" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg>
+      <span>微博</span>
+    </a>
+  </div>
+  <div class="share-wechat" data-share-wechat>
+    <div class="share-qr" data-share-qr aria-hidden="true"></div>
+    <p class="share-tip" data-share-tip>微信扫一扫，在手机上打开，<br>再点右上角 ··· 发给朋友或分享到朋友圈</p>
+  </div>
+  <div class="share-poster" data-share-poster-out hidden>
+    <img alt="这篇文章的分享图" data-share-poster-img>
+    <p class="share-tip">手机上长按图片保存；电脑上 <a href="#" download data-share-poster-save>下载图片</a></p>
+  </div>
+  <p class="share-status" role="status" aria-live="polite" data-share-status></p>
+</div>
+<script src="/assets/share.js?v=202610242242" defer></script>
+
+<div id="notes-ui" data-book="fish" data-book-title="不存在的鱼" data-kind="book" data-author="zhao zhao" data-color="#385A78" data-site="https://wuhanchina039-hub.github.io/" style="--c: #385A78">
+  <div class="share-overlay" data-notes-close hidden></div>
+  <div class="share-panel note-sheet" role="dialog" aria-modal="true" aria-labelledby="note-sheet-title" data-note-sheet hidden>
+    <header class="share-head">
+      <h2 id="note-sheet-title">写想法</h2>
+      <button class="share-close" type="button" data-notes-close aria-label="关闭">×</button>
+    </header>
+    <blockquote class="note-quote" data-sheet-quote></blockquote>
+    <label class="sr-only" for="note-text">我的想法</label>
+    <textarea id="note-text" rows="4" maxlength="1000" placeholder="读到这里，你想到了什么？"></textarea>
+    <p class="note-private">只保存在你这台设备的浏览器里，别人看不到；想让朋友看到，就生成卡片发出去。</p>
+    <div class="note-sheet-actions">
+      <button type="button" class="note-del" data-sheet-del hidden>删除这条笔记</button>
+      <button type="button" class="btn ghost" data-sheet-save>保存</button>
+      <button type="button" class="btn" data-sheet-card>保存并生成卡片</button>
+    </div>
+  </div>
+  <div class="share-panel note-card-panel" role="dialog" aria-modal="true" aria-labelledby="note-card-title" data-note-card hidden>
+    <header class="share-head">
+      <h2 id="note-card-title">想法卡片</h2>
+      <button class="share-close" type="button" data-notes-close aria-label="关闭">×</button>
+    </header>
+    <img class="note-card-img" alt="原文和想法的分享卡片" data-card-img>
+    <p class="share-tip note-card-tip">手机上长按图片，可以保存或直接发给朋友；朋友扫卡片上的二维码，会打开原文这一段。</p>
+    <div class="note-card-actions">
+      <a class="btn" href="#" download data-card-save>保存图片</a>
+      <button type="button" class="btn ghost" data-card-copy>复制原文和链接</button>
+    </div>
+  </div>
+</div>
+<script src="/assets/notes.js?v=202610242242" defer></script>
+
+<script>
+  /* 读过这本书的读者：主按钮改成“继续读”，目录里标出上次读到的那一章 */
+  (function () {
+    var btn = document.querySelector('[data-book-read]');
+    if (!btn) return;
+    try {
+      var last = JSON.parse(localStorage.getItem('last-read-' + btn.getAttribute('data-book-read')));
+      if (!last || !last.url) return;
+      btn.href = last.url;
+      btn.textContent = '继续阅读 →';
+      var restart = document.querySelector('[data-book-restart]');
+      if (restart) {
+        restart.querySelector('[data-book-last]').textContent = last.name;
+        restart.hidden = false;
+      }
+      document.querySelectorAll('.toc a').forEach(function (a) {
+        if (a.getAttribute('href') !== last.url) return;
+        var tag = document.createElement('span');
+        tag.className = 'here';
+        tag.textContent = '上次读到';
+        a.querySelector('.toc-title').insertAdjacentElement('afterend', tag);
+      });
+    } catch (e) {}
+  })();
+</script>
+
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 zhao zhao · 每周更新</div>
+  </footer>
+</body>
+</html>
