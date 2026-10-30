@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 网站图标：晚霞色圆形底，一条白色小鱼，头顶两个气泡 -->
+  <defs>
+    <radialGradient id="glow-orange" cx="12%" cy="4%" r="70%">
+      <stop offset="0" stop-color="#FFB547"/>
+      <stop offset="1" stop-color="#FFB547" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-pink" cx="96%" cy="12%" r="62%">
+      <stop offset="0" stop-color="#E8418F"/>
+      <stop offset="1" stop-color="#E8418F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-violet" cx="78%" cy="104%" r="70%">
+      <stop offset="0" stop-color="#6C4FE0"/>
+      <stop offset="1" stop-color="#6C4FE0" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="round"><circle cx="32" cy="32" r="32"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="64" height="64" fill="#F0525A"/>
+    <rect width="64" height="64" fill="url(#glow-orange)"/>
+    <rect width="64" height="64" fill="url(#glow-pink)"/>
+    <rect width="64" height="64" fill="url(#glow-violet)"/>
+  </g>
+  <g fill="#FFFFFF">
+    <path d="M19 34C24 25.5 31 21.5 38 21.5C46 21.5 51.5 27 54 33Q54.4 34 54 35C51.5 41 46 46.5 38 46.5C31 46.5 24 42.5 19 34Z"/>
+    <path d="M22.5 34L9 23Q12.6 34 9 45Z"/>
+    <circle cx="47.5" cy="16.5" r="2.4" opacity=".85"/>
+    <circle cx="52.2" cy="11" r="1.6" opacity=".7"/>
+  </g>
+  <path d="M36.5 27.5Q34 34 36.5 40.5" fill="none" stroke="#F0525A" stroke-width="1.7" stroke-linecap="round" opacity=".45"/>
+  <circle cx="45" cy="31" r="2.5" fill="#3A1E3F"/>
+  <circle cx="45.8" cy="30.2" r=".8" fill="#FFFFFF"/>
+</svg>
