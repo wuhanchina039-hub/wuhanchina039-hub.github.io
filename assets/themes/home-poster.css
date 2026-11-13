@@ -1,0 +1,93 @@
+/* 首页：只在首页加载，叠加在 editorial（书卷）之上（视觉定稿 V1.0，2026-10-24）。
+   首页允许鲜活，书架保留温度，阅读回归安静：
+   1. 开头：原版“晚霞”三色渐变（橙 → 珊瑚红 → 紫粉）和右侧的圆环、半透明圆，白字；
+   2. 书架：暖纸白底，封面是主角；读过的读者先看到“上次读到”；
+   3. 最近更新、关于我：暖纸白底，尽量不用颜色。
+   书架、列表行、封面的样式在 library.css（各页共用）。 */
+:root {
+  --gutter: max(20px, calc(50vw - 440px));
+  --banner: #F0525A;      /* 开头“晚霞”的底色：珊瑚红，上面叠橙、玫红、紫几团光 */
+  --banner-ink: #FFFFFF;  /* 开头里的文字，深浅模式都不变 */
+}
+body { overflow-x: hidden; }
+/* 首页的大背景：和内页纸张后面的桌面一样，白天、护眼是浅米色加很淡的抽象纹路；夜间仍是原来的深色底 */
+body { background-color: var(--desk, var(--bg)); background-image: var(--desk-art, none); }
+:root[data-theme="dark"] body { background-color: var(--bg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) body { background-color: var(--bg); } }
+.topbar { border-bottom: 0; }
+
+/* 开头和书架都铺满整个屏幕宽度 */
+.hero, .shelf-band {
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* 第一层：开头“晚霞”。最上面一层是文字后面一小片柔和的暗影，只压文字所在的左侧，渐变本身不压暗 */
+.hero {
+  overflow: hidden;
+  padding-top: 48px; padding-bottom: 48px;
+  background-color: var(--banner);
+  background-image:
+    radial-gradient(55% 80% at 18% 48%, rgba(90, 25, 45, .2) 0%, rgba(90, 25, 45, 0) 72%),
+    radial-gradient(55% 85% at 8% 0%, #FFB547 0%, rgba(255, 181, 71, 0) 62%),
+    radial-gradient(50% 80% at 95% 10%, #E8418F 0%, rgba(232, 65, 143, 0) 62%),
+    radial-gradient(65% 95% at 75% 110%, #6C4FE0 0%, rgba(108, 79, 224, 0) 66%),
+    radial-gradient(45% 70% at 15% 110%, #FF7A3D 0%, rgba(255, 122, 61, 0) 62%);
+  color: var(--banner-ink);
+  text-align: left;
+}
+/* 右侧的圆环和半透明圆：比原版淡一些，不和标题抢 */
+.hero::after {
+  content: ""; position: absolute; right: -60px; top: -60px;
+  width: 220px; height: 220px; border-radius: 50%;
+  border: 26px solid rgba(255, 255, 255, .12); pointer-events: none;
+}
+.hero::before {
+  content: ""; position: absolute; right: 18%; bottom: -40px;
+  width: 110px; height: 110px; border-radius: 50%;
+  background: rgba(255, 214, 90, .26); pointer-events: none;
+}
+.hero-text { position: relative; z-index: 1; }
+.hero-text::after { display: none; }
+.hero .hero-title { max-width: 20em; margin: 0; font-family: var(--serif); font-size: clamp(24px, 6.2vw, 42px); font-weight: 700; line-height: 1.45; letter-spacing: .02em; text-shadow: 0 1px 14px rgba(80, 20, 40, .22); }
+.hero .hero-sub { margin: 14px 0 0; font-size: 15px; line-height: 1.8; text-shadow: 0 1px 8px rgba(80, 20, 40, .18); }
+/* 断行：只在逗号、分号之后换行，不把“把判断”拆成两行 */
+.hero-phrase { display: inline-block; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.hero .btn.hero-btn { background: rgba(70, 20, 35, .1); color: #FFFFFF; border-color: rgba(255, 255, 255, .85); font: inherit; font-size: 15px; cursor: pointer; transition: background-color .15s; }
+.hero .btn.hero-btn:hover { background: rgba(255, 255, 255, .16); filter: none; }
+
+/* 第二层：书架，暖纸白底 */
+.shelf-band { padding-top: 40px; padding-bottom: 8px; }
+.shelf-band .resume { margin: 0 0 36px; }
+.shelf-band .section-title { margin-bottom: 26px; }
+
+.section { margin-top: 56px; }
+.section-title { color: var(--ink); font-family: var(--serif); font-size: clamp(22px, 5vw, 28px); font-weight: 700; letter-spacing: .06em; }
+
+
+/* 大屏时内容区变宽（见 editorial.css），通栏里的文字跟着对齐 */
+@media (min-width: 1200px) {
+  :root { --gutter: max(20px, calc(50vw - 540px)); }
+}
+@media (min-width: 1600px) {
+  :root { --gutter: max(20px, calc(50vw - 640px)); }
+}
+@media (max-width: 639px) {
+  .hero { padding-top: 30px; padding-bottom: 34px; }
+  .hero::after { right: -110px; top: -110px; }   /* 手机上标题占满宽度：圆环往外推，只露出一角 */
+  .hero::before { display: none; }
+  .hero-actions { margin-top: 20px; }
+  .shelf-band { padding-top: 28px; }
+  .section { margin-top: 44px; }
+}
+
+/* 较老的手机内核不认识 max()、clamp() 时，退回固定的边距和字号，避免文字贴边或字号失效 */
+@supports not (width: max(1px, 2px)) {
+  :root { --gutter: 20px; }
+  .hero .hero-title { font-size: 28px; }
+  .section-title { font-size: 24px; }
+}
