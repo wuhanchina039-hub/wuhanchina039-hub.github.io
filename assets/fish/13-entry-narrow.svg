@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 990" width="600" height="990" font-family="PingFang SC, 'Noto Sans CJK SC', 'Microsoft YaHei', 'WenQuanYi Zen Hei', sans-serif">
+<defs><marker id="aw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B0593F"/></marker></defs>
+<rect width="600" height="990" fill="#FBF8F2"/>
+<line x1="20" y1="496" x2="580" y2="496" stroke="#CFC6B8" stroke-width="1.5"/>
+<g transform="translate(20,28)"><text x="0" y="32" font-size="30.0" fill="#2B2723" font-weight="700" text-anchor="start">调整前</text>
+<text x="0" y="66" font-size="19.0" fill="#6E665C" font-weight="400" text-anchor="start">总入口里复制着各项专项能力的正文</text>
+<rect x="0" y="92" width="310" height="232" rx="12" fill="#F4EEE3" stroke="#6E665C" stroke-width="2"/>
+<text x="20" y="126" font-size="21.0" fill="#2B2723" font-weight="700" text-anchor="start">总入口</text>
+<rect x="18" y="144" width="274" height="44" rx="7" fill="#FFFDF8" stroke="#6E665C" stroke-dasharray="6 5" stroke-width="1.6"/>
+<text x="34" y="173" font-size="17.0" fill="#6E665C" font-weight="400" text-anchor="start">A 的正文（副本）</text>
+<rect x="392" y="144" width="168" height="44" rx="7" fill="#FFFDF8" stroke="#2B2723" stroke-width="1.8"/>
+<text x="476" y="173" font-size="18.0" fill="#2B2723" font-weight="600" text-anchor="middle">专项 A</text>
+<line x1="388" y1="166" x2="300" y2="166" stroke="#B0593F" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aw)"/>
+<text x="344" y="158" font-size="14.0" fill="#B0593F" font-weight="600" text-anchor="middle">要同步</text>
+<rect x="18" y="202" width="274" height="44" rx="7" fill="#FFFDF8" stroke="#6E665C" stroke-dasharray="6 5" stroke-width="1.6"/>
+<text x="34" y="231" font-size="17.0" fill="#6E665C" font-weight="400" text-anchor="start">B 的正文（副本）</text>
+<rect x="392" y="202" width="168" height="44" rx="7" fill="#FFFDF8" stroke="#2B2723" stroke-width="1.8"/>
+<text x="476" y="231" font-size="18.0" fill="#2B2723" font-weight="600" text-anchor="middle">专项 B</text>
+<line x1="388" y1="224" x2="300" y2="224" stroke="#B0593F" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aw)"/>
+<text x="344" y="216" font-size="14.0" fill="#B0593F" font-weight="600" text-anchor="middle">要同步</text>
+<rect x="18" y="260" width="274" height="44" rx="7" fill="#FFFDF8" stroke="#6E665C" stroke-dasharray="6 5" stroke-width="1.6"/>
+<text x="34" y="289" font-size="17.0" fill="#6E665C" font-weight="400" text-anchor="start">C 的正文（副本）</text>
+<rect x="392" y="260" width="168" height="44" rx="7" fill="#FFFDF8" stroke="#2B2723" stroke-width="1.8"/>
+<text x="476" y="289" font-size="18.0" fill="#2B2723" font-weight="600" text-anchor="middle">专项 C</text>
+<line x1="388" y1="282" x2="314" y2="282" stroke="#B0593F" stroke-width="2.4"/>
+<circle cx="351" cy="282" r="7" fill="#FBF8F2" stroke="#B0593F" stroke-width="2.2"/>
+<text x="476" y="328" font-size="14.0" fill="#B0593F" font-weight="600" text-anchor="middle">离不开入口</text>
+<text x="0" y="372" font-size="18.5" fill="#2B2723" font-weight="400" text-anchor="start">① 专项文件一改，入口里的副本还是旧版，要两处一起改</text>
+<text x="0" y="404" font-size="18.5" fill="#2B2723" font-weight="400" text-anchor="start">② 专项能力要经过入口才能开始，单独拿去别的任务用不上</text></g>
+<g transform="translate(20,532)"><text x="0" y="32" font-size="30.0" fill="#2B2723" font-weight="700" text-anchor="start">调整后</text>
+<text x="0" y="66" font-size="19.0" fill="#6E665C" font-weight="400" text-anchor="start">入口变薄，专项各自独立，按同一种交接方式连接</text>
+<rect x="140" y="92" width="280" height="84" rx="12" fill="#F4EEE3" stroke="#6E665C" stroke-width="2"/>
+<text x="280" y="124" font-size="21.0" fill="#2B2723" font-weight="700" text-anchor="middle">总入口</text>
+<text x="280" y="156" font-size="16.0" fill="#6E665C" font-weight="400" text-anchor="middle">识别能力 · 组织任务 · 交接结果</text>
+<line x1="280" y1="176" x2="280" y2="206" stroke="#6E665C" stroke-width="2"/>
+<rect x="0" y="206" width="560" height="38" rx="19" fill="#FFFDF8" stroke="#4F7A5E" stroke-width="2"/>
+<text x="280" y="231" font-size="17.0" fill="#4F7A5E" font-weight="600" text-anchor="middle">共同的交接方式</text>
+<line x1="62" y1="244" x2="62" y2="278" stroke="#4F7A5E" stroke-width="2"/>
+<rect x="0" y="278" width="125" height="98" rx="9" fill="#FFFDF8" stroke="#2B2723" stroke-width="1.8"/>
+<text x="62" y="310" font-size="18.0" fill="#2B2723" font-weight="600" text-anchor="middle">专项 A</text>
+<text x="62" y="338" font-size="15.0" fill="#6E665C" font-weight="400" text-anchor="middle">自有规则</text>
+<text x="62" y="362" font-size="15.0" fill="#4F7A5E" font-weight="600" text-anchor="middle">可单独运行</text>
+<line x1="207" y1="244" x2="207" y2="278" stroke="#4F7A5E" stroke-width="2"/>
+<rect x="145" y="278" width="125" height="98" rx="9" fill="#FFFDF8" stroke="#2B2723" stroke-width="1.8"/>
+<text x="207" y="310" font-size="18.0" fill="#2B2723" font-weight="600" text-anchor="middle">专项 B</text>
+<text x="207" y="338" font-size="15.0" fill="#6E665C" font-weight="400" text-anchor="middle">自有规则</text>
+<text x="207" y="362" font-size="15.0" fill="#4F7A5E" font-weight="600" text-anchor="middle">可单独运行</text>
+<line x1="352" y1="244" x2="352" y2="278" stroke="#4F7A5E" stroke-width="2"/>
+<rect x="290" y="278" width="125" height="98" rx="9" fill="#FFFDF8" stroke="#2B2723" stroke-width="1.8"/>
+<text x="352" y="310" font-size="18.0" fill="#2B2723" font-weight="600" text-anchor="middle">专项 C</text>
+<text x="352" y="338" font-size="15.0" fill="#6E665C" font-weight="400" text-anchor="middle">自有规则</text>
+<text x="352" y="362" font-size="15.0" fill="#4F7A5E" font-weight="600" text-anchor="middle">可单独运行</text>
+<line x1="497" y1="244" x2="497" y2="278" stroke="#4F7A5E" stroke-width="2"/>
+<rect x="435" y="278" width="125" height="98" rx="9" fill="none" stroke="#6E665C" stroke-dasharray="6 5" stroke-width="1.6"/>
+<text x="497" y="310" font-size="17.0" fill="#6E665C" font-weight="600" text-anchor="middle">+ 新增能力</text>
+<text x="497" y="338" font-size="15.0" fill="#6E665C" font-weight="400" text-anchor="middle">按同一方式</text>
+<text x="497" y="362" font-size="15.0" fill="#6E665C" font-weight="400" text-anchor="middle">接入</text>
+<text x="0" y="416" font-size="18.0" fill="#6E665C" font-weight="400" text-anchor="start">专项里积累的规则和经验，留在各自的文件里</text></g>
+</svg>
